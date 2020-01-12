@@ -1,0 +1,7 @@
+ A command line interface for top 10 rides at disney from a disney travel site 
+https://www.tripsavvy.com/best-walt-disney-world-rides-3225804
+
+-user types in a number from 1-10
+- shows the ride that correlates with that number 
+“ want to know more? “
+-user clicks “want to know more?” for ride description  
