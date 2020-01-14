@@ -10,7 +10,7 @@ class disney_rides::CLI
     
     puts "The Top 10 Rides at Disney World:"
    
-    @rides = disney_rides::Ride.all
+    @rides = Disney_Rides::Ride.today
   end 
   
   def menu 
