@@ -26,6 +26,11 @@ class Disney_Rides::Ride
     #Disney_Rides::RideScraper.new("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804")
     def self.scrape_rides
       rides = []
+      
+      rides << self.scrape_tripsavvy
+      
+      rides 
+      
     #   ride_1 = self.new 
     #   ride_1.name = "Pirates of the Caribbean"
     #   ride_1.description "A landmark achievement in theme park storytelling, it is a pitch-perfect attraction with perhaps the coolest theme park ride song ever. By the way, Pirates may be the best ride at Disney World, but there is another Disney ride that surpasses it and just may be the best theme park attraction in the world: Pirates of the Caribbean. Say what? It's the next-generation Pirates attraction at Shanghai Disneyland, Battle for the Sunken Treasure." 
@@ -40,7 +45,10 @@ class Disney_Rides::Ride
       
     # [ride_1, ride_2]
     
-    rides 
+    
   end 
   
+  def self.scrape_tripsavvy
+    doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
+    
 end   
