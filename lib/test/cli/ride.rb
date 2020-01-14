@@ -18,20 +18,29 @@ class Disney_Rides::Ride
   #     10 Splash Mountain -Disney marries the classic log flume ride (with one humdinger of a drop) to an animatronics-filled dark ride themed to the Uncle Remus characters from "Song of the South." You'll be humming "Zip-A-Dee-Doo-Dah" (once you regain your composure from the drop). - Have Fun!
   #   DOC
   
+      self.scrape_rides
+    end
     
-      ride_1 = self.new 
-      ride_1.name = "Pirates of the Caribbean"
-      ride_1.description "A landmark achievement in theme park storytelling, it is a pitch-perfect attraction with perhaps the coolest theme park ride song ever. By the way, Pirates may be the best ride at Disney World, but there is another Disney ride that surpasses it and just may be the best theme park attraction in the world: Pirates of the Caribbean. Say what? It's the next-generation Pirates attraction at Shanghai Disneyland, Battle for the Sunken Treasure." 
-      ride_1.fun = true "Have Fun!" 
-      ride_1.url = "https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"
+    
+    #scrape woot and return rides based on the data 
+    #Disney_Rides::RideScraper.new("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804")
+    def self.scrape_rides
+      rides = []
+    #   ride_1 = self.new 
+    #   ride_1.name = "Pirates of the Caribbean"
+    #   ride_1.description "A landmark achievement in theme park storytelling, it is a pitch-perfect attraction with perhaps the coolest theme park ride song ever. By the way, Pirates may be the best ride at Disney World, but there is another Disney ride that surpasses it and just may be the best theme park attraction in the world: Pirates of the Caribbean. Say what? It's the next-generation Pirates attraction at Shanghai Disneyland, Battle for the Sunken Treasure." 
+    #   ride_1.fun = true "Have Fun!" 
+    #   ride_1.url = "https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"
       
-      ride_2 = self.new 
-      ride_2.name = "The Twilight Zone Tower of Terror"
-      ride_2.description "It is a modern-day classic Disney theme park attraction that combines a thrilling freefall ride, dazzling effects, and an inspired storyline. The "fourth dimension" sequence, in which the ride vehicles move horizontally through the ride building is stunning." 
-      ride_2.fun = true  "Have Fun!" 
-      ride_2.url = "https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"
+    #   ride_2 = self.new 
+    #   ride_2.name = "The Twilight Zone Tower of Terror"
+    #   ride_2.description "It is a modern-day classic Disney theme park attraction that combines a thrilling freefall ride, dazzling effects, and an inspired storyline. The "fourth dimension" sequence, in which the ride vehicles move horizontally through the ride building is stunning." 
+    #   ride_2.fun = true  "Have Fun!" 
+    #   ride_2.url = "https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"
       
-    [ride_1, ride_2]
+    # [ride_1, ride_2]
+    
+    rides 
   end 
   
 end   
