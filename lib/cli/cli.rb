@@ -1,4 +1,4 @@
-class disney_rides::CLI 
+class DisneyRides::CLI 
   
   def call 
     list_rides 

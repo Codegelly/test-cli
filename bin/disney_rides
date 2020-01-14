@@ -3,6 +3,6 @@
 # require './lib/disney_rides'
 
 require "bundler/setup"
-require "test/cli"
+require "./lib/disney_rides.rb"
 
 TestCli::CLI.new.call

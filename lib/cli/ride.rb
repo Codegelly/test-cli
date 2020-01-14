@@ -1,4 +1,4 @@
-class Disney_Rides::Ride
+class DisneyRides::Ride
   
   attr_accessor :name, :description, :fun, :url 
 
@@ -50,5 +50,6 @@ class Disney_Rides::Ride
   
   def self.scrape_tripsavvy
     doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
-    
+  end
+  
 end   
