@@ -8,7 +8,7 @@ class DisneyRides::CLI
   
   def list_rides 
     puts "The Top 10 Rides at Disney World:"
-    @rides = Disney_Rides::Ride.today
+    @rides = DisneyRides::Ride.today
     @rides.each.with_index(1) do |ride, i|
       puts "#{i}. #{ride.name} - #{ride.description} - #{ride.fun}"
     end
@@ -16,7 +16,7 @@ class DisneyRides::CLI
   
   def menu 
   input = nil 
-    while != "exit"
+    while input != "exit"
         puts "Enter the number to know what ride is ranked or type list to see the ride names again or type exit to enter :"
     input = gets.strip.downcase
     

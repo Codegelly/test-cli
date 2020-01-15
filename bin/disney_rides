@@ -1,8 +1,10 @@
  #!/usr/bin/env ruby 
- 
+
 # require './lib/disney_rides'
 
 require "bundler/setup"
 require "./lib/disney_rides.rb"
 
-TestCli::CLI.new.call
+
+
+DisneyRides::CLI.new.call

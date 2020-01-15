@@ -5,7 +5,7 @@ require "cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "test-cli"
-  spec.version       = Test::Cli::VERSION
+  spec.version       = DisneyRides::VERSION
   spec.authors       = ["'Angelica  Thompson'"]
   spec.email         = ["'i.thompson89@outlook.com'"]
 
