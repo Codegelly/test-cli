@@ -1,6 +1,6 @@
 class DisneyRides::Ride
   
-  attr_accessor :name, :description, :fun, :url 
+  attr_accessor :name, :description, :url 
 
    def self.today
    # i should return a bunch of instances of rides 
@@ -54,8 +54,12 @@ class DisneyRides::Ride
   
   def self.scrape_tripsavvy
     doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
-    name = doc.search("h2.mntl-sc-block-heading__link").text
-    description = doc.search("div id="mntl-sc-block_2-0-2" class="comp text-passage mntl-sc-block travel-sc-block-html mntl-sc-block-html").text 
+    
+    name = doc.search("h2").collect {|name| name.css("a").text}
+   # binding.pry
+    
+    description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").text 
+     binding.pry
   end
   #binding.pry
 end   
