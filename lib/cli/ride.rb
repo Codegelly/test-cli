@@ -56,9 +56,11 @@ class DisneyRides::Ride
     doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
     
     name = doc.search("h2").collect {|name| name.css("a").text}
-   # binding.pry
+    #binding.pry
     
     description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").text 
+     #description = doc.search("p").collect
+     #{|description| description.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").text}
      binding.pry
   end
   #binding.pry
