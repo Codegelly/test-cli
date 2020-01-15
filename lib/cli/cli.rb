@@ -10,7 +10,7 @@ class DisneyRides::CLI
     puts "The Top 10 Rides at Disney World:"
     @rides = DisneyRides::Ride.today
     @rides.each.with_index(1) do |ride, i|
-      puts "#{i}. #{ride.name} - #{ride.description} - #{ride.fun}"
+      puts "#{i}. #{ride.name}"  # #{ride.description} - #{ride.fun}
     end
   end 
   
@@ -22,7 +22,8 @@ class DisneyRides::CLI
     
     if input.to_i > 0 
       the_ride = @rides[input.to_i-1]
-      puts "#{the_ride.name} - #{the_ride.description} - #{ride.fun}"
+      puts "#{the_ride.name}"
+      #{the_ride.description} - #{ride.fun}"
     elsif input == "list"  
     list_rides
     else 
