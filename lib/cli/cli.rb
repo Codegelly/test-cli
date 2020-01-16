@@ -23,7 +23,7 @@ class DisneyRides::CLI
     if input.to_i > 0 
       the_ride = @rides[input.to_i-1]
       puts "#{the_ride.name}"
-      #{the_ride.description} 
+      puts "#{the_ride.description}" 
     elsif input == "list"  
     list_rides
     else 
