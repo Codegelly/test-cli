@@ -1,14 +1,16 @@
 class DisneyRides::Ride
   
-  attr_accessor :name, :description, :url 
+  attr_accessor :name, :description 
 
-   def self.today
+   #def self.today
    # i should return a bunch of instances of rides 
-  puts <<-DOC 
-   1 pirates
-   2 soar 
-   3 space 
-   DOC
+  # puts <<-DOC 
+  # 1 pirates
+  # 2 soar 
+  # 3 space 
+  # DOC
+   
+   
   # puts <<-DOC.gsub /^\s*/,
   #     1 Pirates of the Caribbean - A landmark achievement in theme park storytelling, it is a pitch-perfect attraction with perhaps the coolest theme park ride song ever. By the way, Pirates may be the best ride at Disney World, but there is another Disney ride that surpasses it and just may be the best theme park attraction in the world: Pirates of the Caribbean. Say what? It's the next-generation Pirates attraction at Shanghai Disneyland, Battle for the Sunken Treasure. - Have Fun ! 
   #     2 The Twilight Zone Tower of Terror - It is a modern-day classic Disney theme park attraction that combines a thrilling freefall ride, dazzling effects, and an inspired storyline. The "fourth dimension" sequence, in which the ride vehicles move horizontally through the ride building is stunning. - Have Fun! 
@@ -22,18 +24,21 @@ class DisneyRides::Ride
   #     10 Splash Mountain -Disney marries the classic log flume ride (with one humdinger of a drop) to an animatronics-filled dark ride themed to the Uncle Remus characters from "Song of the South." You'll be humming "Zip-A-Dee-Doo-Dah" (once you regain your composure from the drop). - Have Fun!
   #   DOC
   
-      self.scrape_rides
-    end
+      #self.scrape_rides
+      
+     # self.scrape_tripsavvy
+    #end
     
     
     #scrape woot and return rides based on the data 
     #Disney_Rides::RideScraper.new("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804")
-    def self.scrape_rides
-      rides = []
+    
+    #def self.scrape_rides
+     # rides = []
       
-      rides << self.scrape_tripsavvy
+      #rides << self.scrape_tripsavvy
       
-      rides 
+      #rides 
       
     #   ride_1 = self.new 
     #   ride_1.name = "Pirates of the Caribbean"
@@ -50,20 +55,31 @@ class DisneyRides::Ride
     # [ride_1, ride_2]
     
     
-  end 
+ # end 
   
   def self.scrape_tripsavvy
     doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
     
-    name = doc.search("h2").collect {|name| name.css("a").text}
-    #binding.pry
+    ride = self.new
+    
+    ride.name = doc.search("h2").collect {|name| name.css("a").text}
+   # binding.pry
     
     #description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").text 
     
     
-     description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").collect do |paragraph| paragraph.css("p").text
-     binding.pry
-  end
+     #ride.description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").collect do |paragraph| paragraph.css("p").text
+     
+    ride
+     
+   #end 
+    #binding.pry
+  
+  # def drop
+  #   description.drop(6).flatten 
+    
+  # end 
+  
 end 
   #binding.pry
 end   
