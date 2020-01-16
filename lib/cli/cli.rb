@@ -2,6 +2,7 @@ class DisneyRides::CLI
   
   def call 
     list_rides 
+    des
     #binding.pry
     menu
     goodbye 
@@ -10,13 +11,14 @@ class DisneyRides::CLI
   def list_rides 
     puts "The Top 10 Rides at Disney World:"
     @rides = DisneyRides::Ride.scrape_tripsavvy
-    #binding.pry
+    binding.pry
     @rides.name.each.with_index(1) do |ride, i|
-     # binding.pry
+    # binding.pry
       puts "#{i}. #{ride}"
       # #{ride.description} 
     end
   end 
+  
   
   def menu 
   input = nil 

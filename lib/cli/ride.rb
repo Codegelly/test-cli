@@ -68,18 +68,19 @@ class DisneyRides::Ride
     #description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").text 
     
     
-     #ride.description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").collect do |paragraph| paragraph.css("p").text
+     ride.description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").collect do |paragraph| paragraph.css("p").text
      
     ride
      
-   #end 
+   end 
     #binding.pry
-  
-  # def drop
-  #   description.drop(6).flatten 
-    
-  # end 
-  
 end 
+  
+   def des
+  description.slice(0,5)
+  
+    
+  end 
+  
   #binding.pry
-end   
+end
