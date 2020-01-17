@@ -5,3 +5,15 @@ https://www.tripsavvy.com/best-walt-disney-world-rides-3225804
 - shows the ride that correlates with that number 
 “ want to know more? “
 -user clicks “want to know more?” for ride description  
+
+
+
+
+
+
+
+
+ # def drop
+  #   description.drop(6).flatten 
+    
+  # end 

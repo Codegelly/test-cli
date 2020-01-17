@@ -65,21 +65,15 @@ class DisneyRides::Ride
     ride.name = doc.search("h2").collect {|name| name.css("a").text}
    # binding.pry
     
-    ride.description = doc.css(".comp.list-sc-item mntl-block").collect { |paragraph| paragraph.css("p").text}
-    
+    ride.description = doc.css(".comp.list-sc-item.mntl-block").collect {|paragraph| paragraph.css("p").text}
+    #binding.pry
     
      #ride.description = doc.css(".comp.text-passage.mntl-sc-block.travel-sc-block-html.mntl-sc-block-html").collect do |paragraph| paragraph.css("p").text
      
     ride
-     
-   #end 
-    #binding.pry
+    # binding.pry
+   end 
+   # binding.pry
   
-  # def drop
-  #   description.drop(6).flatten 
-    
-  # end 
-  
-end 
   #binding.pry
 end   

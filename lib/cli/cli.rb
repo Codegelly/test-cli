@@ -12,10 +12,11 @@ class DisneyRides::CLI
     @rides = DisneyRides::Ride.scrape_tripsavvy
     #binding.pry
     @rides.name.each.with_index(1) do |ride, i|
-     # binding.pry
       puts "#{i}. #{ride}"
       # #{ride.description} 
     end
+    # binding.pry
+    menu
   end 
   
   def menu 
