@@ -26,9 +26,9 @@ class DisneyRides::CLI
     
     if input.to_i > 0 && input.to_i < 11
       #the_ride = 
-      @rides.name[input.to_i-1]
-      #puts "#{the_ride.name}"
-     # puts "#{the_ride.description}" 
+      puts @rides.name[input.to_i-1]
+      puts "-------------"
+      puts @rides.description[input.to_i-1]
     elsif input == "list"  
     list_rides
     elsif input == "exit"
