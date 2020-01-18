@@ -2,22 +2,23 @@ class DisneyRides::CLI
   
   def call 
     DisneyRides::Scraper.scrape_tripsavvy
-    # list_rides 
+    DisneyRides::Scraper.scrap_desc
+    list_rides 
     # menu
     # goodbye 
   end   
   
   def list_rides 
     puts "The Top 10 Rides at Disney World:"
-    @rides = DisneyRides::Ride.scrape_tripsavvy
-    @rides.name.each.with_index(1) do |ride, i|
-      puts "#{i}. #{ride}"
+    #@rides = DisneyRides::Ride.scrape_tripsavvy
+   DisneyRides::Ride.all.each.with_index(1) do |ride, i|
+      puts "#{i}. #{ride.name}"
   end
     menu
   end 
   
   def menu 
-    input = nil 
+   # input = nil 
       while input != "exit"
         puts "Enter the number to know what ride is ranked or type list to see the ride names again or type exit to exit :"
     input = gets.strip.downcase
