@@ -5,7 +5,7 @@ class DisneyRides::CLI
     DisneyRides::Scraper.scrap_desc
     list_rides 
      menu
-    # goodbye 
+     goodbye 
   end   
   
   def list_rides 
@@ -25,20 +25,10 @@ class DisneyRides::CLI
         puts "Not sure what you want, type number between 1-10 or exit"
       menu
       else 
-        
-      end 
-      # puts @rides.name[input.to_i-1]
-      # puts "-------------"
+       puts DisneyRides::Ride.all[input.to_i-1].description
+       puts "-------------"
       # puts @rides.description[input.to_i-1]
-      #   elsif input == "list"  
-      #     list_rides
-      #   elsif input == "exit"
-      #     goodbye 
-      # exit 
-      # else 
-      #   puts "Not sure what you want, type number or exit" 
-    # end  
-     
+      end 
   end 
   
   def goodbye 
