@@ -1,11 +1,17 @@
 class DisneyRides::Scraper
   
-  attr_accessor :name, :description 
+  #attr_accessor :name, :description 
   
     def self.scrape_tripsavvy
       doc = Nokogiri::HTML(open("https://www.tripsavvy.com/best-walt-disney-world-rides-3225804"))
       goodrides = doc.search("h2").collect {|name| name.css("a").text}
-      goodrides.each do |grides| Ride.new (grides)
+      goodrides.each do |grides|
+      DisneyRides::Ride.new (grides)
+     # binding.pry 
+     # ride_desc = doc.css(".comp.list-sc-item.mntl-block").collect {|paragraph| paragraph.css("p").text}
+    
     end 
-    end 
+    binding.pry
+    end
+    #binding.pry 
   end   
