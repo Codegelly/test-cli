@@ -4,7 +4,7 @@ class DisneyRides::CLI
     DisneyRides::Scraper.scrape_tripsavvy
     DisneyRides::Scraper.scrap_desc
     list_rides 
-    # menu
+     menu
     # goodbye 
   end   
   
@@ -18,8 +18,6 @@ class DisneyRides::CLI
   end 
   
   def menu 
-   # input = nil 
-      while input != "exit"
         puts "Enter the number to know what ride is ranked or type list to see the ride names again or type exit to exit :"
     input = gets.strip.downcase
     
@@ -35,7 +33,7 @@ class DisneyRides::CLI
       else 
         puts "Not sure what you want, type number or exit" 
      end  
-    end 
+     
   end 
   
   def goodbye 
