@@ -1,9 +1,10 @@
 class DisneyRides::CLI 
   
   def call 
-    list_rides 
-    menu
-    goodbye 
+    DisneyRides::Scraper.scrape_tripsavvy
+    # list_rides 
+    # menu
+    # goodbye 
   end   
   
   def list_rides 
